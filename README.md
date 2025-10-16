@@ -38,7 +38,7 @@ public static class Program
         Player player = new();
 
         // Get components from the player entity
-        player.GetOrAddComponents(out PositionComponent position, out VelocityComponent velocity);
+        player.Components(out PositionComponent position, out VelocityComponent velocity);
 
         // Initialize components
         position.X = 0;

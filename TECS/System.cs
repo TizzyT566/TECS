@@ -5,13 +5,13 @@
 /// </summary>
 public static class System
 {
-    public static void GetOrAddComponents<C>(this Entity e, out C c)
+    public static void Components<C>(this Entity e, out C c)
         where C : Component<C>, new()
     {
         c = Component<C>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2>(this Entity e, out C1 c1, out C2 c2)
+    public static void Components<C1, C2>(this Entity e, out C1 c1, out C2 c2)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
     {
@@ -19,7 +19,7 @@ public static class System
         c2 = Component<C2>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3>(this Entity e, out C1 c1, out C2 c2, out C3 c3)
+    public static void Components<C1, C2, C3>(this Entity e, out C1 c1, out C2 c2, out C3 c3)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -29,7 +29,7 @@ public static class System
         c3 = Component<C3>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4)
+    public static void Components<C1, C2, C3, C4>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -41,7 +41,7 @@ public static class System
         c4 = Component<C4>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5)
+    public static void Components<C1, C2, C3, C4, C5>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -55,7 +55,7 @@ public static class System
         c5 = Component<C5>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6)
+    public static void Components<C1, C2, C3, C4, C5, C6>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -71,7 +71,7 @@ public static class System
         c6 = Component<C6>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -89,7 +89,7 @@ public static class System
         c7 = Component<C7>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7, C8>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7, C8>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -109,7 +109,7 @@ public static class System
         c8 = Component<C8>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7, C8, C9>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7, C8, C9>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -131,7 +131,7 @@ public static class System
         c9 = Component<C9>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -155,7 +155,7 @@ public static class System
         c10 = Component<C10>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -181,7 +181,7 @@ public static class System
         c11 = Component<C11>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -209,7 +209,7 @@ public static class System
         c12 = Component<C12>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12, out C13 c13)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12, out C13 c13)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -239,7 +239,7 @@ public static class System
         c13 = Component<C13>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12, out C13 c13, out C14 c14)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12, out C13 c13, out C14 c14)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -271,7 +271,7 @@ public static class System
         c14 = Component<C14>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12, out C13 c13, out C14 c14, out C15 c15)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12, out C13 c13, out C14 c14, out C15 c15)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
@@ -305,7 +305,7 @@ public static class System
         c15 = Component<C15>.GetOrAdd(e);
     }
 
-    public static void GetOrAddComponents<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12, out C13 c13, out C14 c14, out C15 c15, out C16 c16)
+    public static void Components<C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16>(this Entity e, out C1 c1, out C2 c2, out C3 c3, out C4 c4, out C5 c5, out C6 c6, out C7 c7, out C8 c8, out C9 c9, out C10 c10, out C11 c11, out C12 c12, out C13 c13, out C14 c14, out C15 c15, out C16 c16)
         where C1 : Component<C1>, new()
         where C2 : Component<C2>, new()
         where C3 : Component<C3>, new()
