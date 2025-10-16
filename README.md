@@ -1,6 +1,6 @@
 # TECS - Tiny Entity Component System
 
-TECS is a lightweight Entity-Component-System (ECS) framework designed for simplicity and performance. It provides a minimalistic approach to managing entities and their associated components, enabling efficient data-driven design for games and other applications.
+TECS is a lightweight Entity-Component-System (ECS) framework designed for simplicity and performance. It provides a minimalistic approach to managing entities and their associated components, enabling efficient design for games and other applications.
 
 ## Features
 - **Entity Management**: Base class for entities with unique identifiers.
@@ -16,19 +16,19 @@ Add TECS to your project by including the `TECS` namespace and referencing the r
 using TECS;
 
 // Define components
-public class PositionComponent : IComponent
+public class PositionComponent : Component
 {
     public float X { get; set; }
     public float Y { get; set; }
 }
-public class VelocityComponent : IComponent
+public class VelocityComponent : Component
 {
     public float X { get; set; }
     public float Y { get; set; }
 }
 
 // Define an entity that attaches the components
-public class Player : Entity, IAttach<PositionComponent>, IAttach<VelocityComponent>;
+public class Player : Entity;
 
 public static class Program
 {
@@ -37,8 +37,8 @@ public static class Program
         // Create a new player entity
         Player player = new();
 
-        // Unpack components from the player entity
-        player.Unpack(out PositionComponent position, out VelocityComponent velocity);
+        // Get components from the player entity
+        player.GetOrAddComponents(out PositionComponent position, out VelocityComponent velocity);
 
         // Initialize components
         position.X = 0;
@@ -52,6 +52,9 @@ public static class Program
 
         // Print updated position
         Console.WriteLine($"Player Position: X={position.X}, Y={position.Y}");
+
+        // Remove the velocity and position components
+        player.RemoveComponents<VelocityComponent, PositionComponent>();
     }
 }
 ```
