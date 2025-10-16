@@ -13,48 +13,43 @@ Add TECS to your project by including the `TECS` namespace and referencing the r
 ## Usage Example
 
 ```csharp
+using System;
 using TECS;
 
-// Define components
-public class Position : Component<Position>
-{
-    public float X { get; set; }
-    public float Y { get; set; }
-}
-public class Velocity : Component<Velocity>
-{
-    public float X { get; set; }
-    public float Y { get; set; }
-}
+// Create a new player entity
+Player player = new();
+
+// Get components from the player entity
+player.Components(out Position position, out Velocity velocity);
+
+// Initialize components
+position.X = 0;
+position.Y = 0;
+velocity.X = 1;
+velocity.Y = 1;
+
+// Update position based on velocity
+position.X += velocity.X;
+position.Y += velocity.Y;
+
+// Print updated position
+Console.WriteLine($"Player Position: X={position.X}, Y={position.Y}");
+
+// Remove the velocity and position components
+player.RemoveComponents<Velocity, Position>();
 
 // Define an entity that attaches the components
 public class Player : Entity;
 
-public static class Program
+// Define components
+public class Position : IComponent
 {
-    public static void Main()
-    {
-        // Create a new player entity
-        Player player = new();
-
-        // Get components from the player entity
-        player.Components(out Position position, out Velocity velocity);
-
-        // Initialize components
-        position.X = 0;
-        position.Y = 0;
-        velocity.X = 1;
-        velocity.Y = 1;
-
-        // Update position based on velocity
-        position.X += velocity.X;
-        position.Y += velocity.Y;
-
-        // Print updated position
-        Console.WriteLine($"Player Position: X={position.X}, Y={position.Y}");
-
-        // Remove the velocity and position components
-        player.RemoveComponents<Velocity, Position>();
-    }
+    public float X { get; set; }
+    public float Y { get; set; }
+}
+public class Velocity : IComponent
+{
+    public float X { get; set; }
+    public float Y { get; set; }
 }
 ```
