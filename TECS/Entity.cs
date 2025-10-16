@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
 using System.Threading;
 
 namespace TECS;
@@ -17,12 +16,13 @@ public abstract class Entity
     /// <exception cref="InvalidOperationException">
     /// Number of Entity instances exhausted.
     /// </exception>
-    public long Id { get; }
+    public long Id { get; } = GenerateEntityId();
 
-    public Entity()
+    private static long GenerateEntityId()
     {
-        Id = Interlocked.Increment(ref _entityIdCounter);
-        if (Id == 0) // Overflow check, 0 is reserved.
+        long id = Interlocked.Increment(ref _entityIdCounter);
+        if (id == 0) // Overflow check, 0 is reserved.
             throw new InvalidOperationException("Entity ID overflow.");
+        return id;
     }
 }
