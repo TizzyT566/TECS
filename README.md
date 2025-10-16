@@ -16,12 +16,12 @@ Add TECS to your project by including the `TECS` namespace and referencing the r
 using TECS;
 
 // Define components
-public class PositionComponent : Component
+public class Position : Component<Position>
 {
     public float X { get; set; }
     public float Y { get; set; }
 }
-public class VelocityComponent : Component
+public class Velocity : Component<Velocity>
 {
     public float X { get; set; }
     public float Y { get; set; }
@@ -38,7 +38,7 @@ public static class Program
         Player player = new();
 
         // Get components from the player entity
-        player.Components(out PositionComponent position, out VelocityComponent velocity);
+        player.Components(out Position position, out Velocity velocity);
 
         // Initialize components
         position.X = 0;
@@ -54,7 +54,7 @@ public static class Program
         Console.WriteLine($"Player Position: X={position.X}, Y={position.Y}");
 
         // Remove the velocity and position components
-        player.RemoveComponents<VelocityComponent, PositionComponent>();
+        player.RemoveComponents<Velocity, Position>();
     }
 }
 ```
